@@ -22,3 +22,5 @@ content-type: application/json
 
 ###
 PATCH http://localhost:3000/products/1
+content-type: application/json
+
