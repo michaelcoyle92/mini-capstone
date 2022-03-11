@@ -10,4 +10,15 @@ GET http://localhost:3000/products/1
 
 ###
 
-POST http://localhost:3000/products#create
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+  "input_name": "Tricone",
+  "input_price": 5655,
+  "input_url": "mrmrmrmr.com",
+  "input_description": "a Tricone"
+}
+
+###
+PATCH http://localhost:3000/products/1
