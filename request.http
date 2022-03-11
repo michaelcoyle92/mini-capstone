@@ -21,6 +21,12 @@ content-type: application/json
 }
 
 ###
-PATCH http://localhost:3000/products/1
+PATCH http://localhost:3000/products/3
 content-type: application/json
 
+{
+  "input_name": "National Tricone Style 1 Resonator",
+  "input_price": 6750,
+  "input_url": "https://www.12fret.com/wp-content/uploads/ngg_featured/national-style-1-tricone-2001-cons-full-front.jpg",
+  "input_description": "A reproduction of the 1927 classic Style 1 Tricone resonator guitar by National Guitars"
+  }
