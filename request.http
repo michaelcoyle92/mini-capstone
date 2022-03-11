@@ -30,3 +30,19 @@ content-type: application/json
   "input_url": "https://www.12fret.com/wp-content/uploads/ngg_featured/national-style-1-tricone-2001-cons-full-front.jpg",
   "input_description": "A reproduction of the 1927 classic Style 1 Tricone resonator guitar by National Guitars"
   }
+
+###
+
+POST http://localhost:3000/products
+content-type: application/json
+
+{
+  "input_name": "test destroy",
+  "input_price": 5655,
+  "input_url": "destroythis.com",
+  "input_description": "only destruction here"
+}
+
+###
+
+DELETE http://localhost:3000/products/4
