@@ -1,0 +1,2 @@
+giclass Image < ApplicationRecord
+end
