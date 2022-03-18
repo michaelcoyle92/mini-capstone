@@ -1,7 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+Product.create!([
+  {name: "Single cone Biscuit Bridge Resonator", price: "5000.0", image_url: "mrmr.com", description: "A single cone biscuit bridge resonator brass guitar", inventory: nil},
+  {name: "Single Cone Spider Bridge Resonator", price: "5700.0", image_url: "mrguitar.com", description: "A Single Cone Spider Bridge Resonator guitar", inventory: nil},
+  {name: "National Tricone Style 1 Resonator", price: "6750.0", image_url: "https://www.12fret.com/wp-content/uploads/ngg_featured/national-style-1-tricone-2001-cons-full-front.jpg", description: "A reproduction of the 1927 classic Style 1 Tricone resonator guitar by National Guitars", inventory: nil}
+])

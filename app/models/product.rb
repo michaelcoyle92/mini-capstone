@@ -1,4 +1,11 @@
 class Product < ApplicationRecord
+  validates :name,  presence: true 
+  validates :name, uniqueness: true
+  validates :price, presence: true 
+  validates :price, numericality: { greater_than: 0 }
+  validates :description, presence: true
+  validates :description, length: {in: 10...500}
+
   def friendly_updated_at
     updated_at.strftime("%A, %d %b %Y %l:%M %p")
   end
@@ -9,7 +16,7 @@ class Product < ApplicationRecord
   
 
   def tax
-    return price * 0.09
+   price * 0.09
   end
 
   def total
