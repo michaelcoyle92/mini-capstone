@@ -1,13 +1,18 @@
 class ProductsController < ApplicationController
   def index 
-    product = Product.all  
-    render json: product.as_json
+    @products = Product.all
+    # product = Product.all  
+    # render json: products.as_json(methods: [:tax, :is_discounted?, :total])
+    # render json: product.as_json
     render template: "products/index"
   end
 
   def show
-    product = Product.find_by(id: params[:id])
-    render json: product.as_json 
+    # product = Product.find_by(id: params[:id])
+    @product = Product.find_by(id: params[:id])
+    remder template: "products/show"
+    
+    # render json: product.as_json 
   end
 
   def create
@@ -42,7 +47,7 @@ class ProductsController < ApplicationController
     product.destroy
 
 
-    render json: product.as_json
+    render json: {message: "destroyed"}
   end
   
 
