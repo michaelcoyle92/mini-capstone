@@ -33,16 +33,42 @@ content-type: application/json
 
 ###
 
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDc5NzMzNjV9.74lxEOHBa0ENk6ErEAsj7ElX5IdYRDH6na6tPkSvgBI
 content-type: application/json
 
 {
-  "input_name": "test destroy",
+  "input_name": "testy destroy",
   "input_price": 5655,
-  "input_url": "destroythis.com",
   "input_description": "only destruction here"
 }
 
 ###
 
 DELETE http://localhost:3000/products/4
+
+###
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "harrythedog",
+  "email": "harrythedog@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+###
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "harrythedog@test.com",
+  "password": "password"
+}
+
+###

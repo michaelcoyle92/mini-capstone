@@ -1,16 +1,16 @@
 class ProductsController < ApplicationController
   def index 
-    @products = Product.all
-    # product = Product.all  
+    # @products = Product.all
+    product = Product.all  
     # render json: products.as_json(methods: [:tax, :is_discounted?, :total])
-    # render json: product.as_json
-    render template: "products/index"
+    render json: product.as_json
+    # render template: "products/index"
   end
 
   def show
     # product = Product.find_by(id: params[:id])
     @product = Product.find_by(id: params[:id])
-    remder template: "products/show"
+    render template: "products/show"
     
     # render json: product.as_json 
   end
@@ -19,7 +19,6 @@ class ProductsController < ApplicationController
     product = Product.new(
       name: params[:input_name],
       price: params[:input_price],
-      image_url: params[:input_url],
       description: params[:input_description]
     )
     if product.save
