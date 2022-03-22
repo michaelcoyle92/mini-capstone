@@ -1,4 +1,16 @@
 class OrdersController < ApplicationController
+  def show
+    order = Order.find_by(id: params[:id])
+    render json: order.as_json
+  end
+
+  def index
+    order = Order.find_by(id: params[:id])
+    render json: order.as_json
+  end
+  
+  
+  
   def create
     order = Order.new(
       user_id: params[:user_id],
@@ -9,5 +21,7 @@ class OrdersController < ApplicationController
       total: params[:total]
 
     )
+    order.save
+    render json: {message: "created"}
   end
 end

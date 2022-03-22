@@ -72,3 +72,20 @@ Content-Type: application/json
 }
 
 ###
+
+POST http://localhost:3000/orders.json
+Content-Type: application/json
+
+{
+  "user_id": 4,
+  "product_id": 3,
+  "quantity": 2,
+  "subtotal": 6750,
+  "tax": 607.50,
+  "total": 7357.50
+}
+
+
+###
+
+GET http://localhost:3000/orders
