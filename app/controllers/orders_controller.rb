@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
   
   def create
     order = Order.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
       subtotal: params[:subtotal],
@@ -22,6 +22,6 @@ class OrdersController < ApplicationController
 
     )
     order.save
-    render json: {message: "created"}
+    render json: order.as_json
   end
 end
