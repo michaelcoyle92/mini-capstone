@@ -1,8 +1,10 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_admin
+  
   def index
     @products = Product.all
-    render json: @products.as_json
-    # render template: "products/index"
+    # render json: @products.as_json
+    render template: "products/index"
   end
 
   def show
